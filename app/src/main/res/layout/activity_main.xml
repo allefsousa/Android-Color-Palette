@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root"
     tools:context=".MainActivity">
 
     <ImageView
@@ -11,8 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintTop_toTopOf="parent"
         />
 
@@ -20,9 +25,19 @@
         android:id="@+id/view_vibrant"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="vibrant"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/view_vibrant"
+        app:layout_constraintBottom_toBottomOf="@+id/view_vibrant"
         />
 
     <View
@@ -33,6 +48,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_vibrant"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ligth vibrant"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/view_light_vibrant"
+        app:layout_constraintBottom_toBottomOf="@+id/view_light_vibrant"
+        />
 
     <View
         android:id="@+id/view_dark_vibrant"
@@ -42,6 +66,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_light_vibrant"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark vibrant"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/view_dark_vibrant"
+        app:layout_constraintBottom_toBottomOf="@+id/view_dark_vibrant"
+        />
     <View
         android:id="@+id/view_light_muted"
         android:layout_width="match_parent"
@@ -50,6 +83,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_dark_vibrant"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Light Muted"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/view_light_muted"
+        app:layout_constraintBottom_toBottomOf="@+id/view_light_muted"
+        />
     <View
         android:id="@+id/view_muted"
         android:layout_width="match_parent"
@@ -57,6 +99,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_light_muted"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Muted"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/view_muted"
+        app:layout_constraintBottom_toBottomOf="@+id/view_muted"
         />
 
     <View
@@ -67,16 +118,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_muted"
         />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="28dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text=" Dark Muted"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/view_dark_muted"
+        app:layout_constraintBottom_toBottomOf="@+id/view_dark_muted"
+        />
+    <View
+        android:id="@+id/view_dominant"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_dark_muted"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Dominant"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/view_dominant"
+        app:layout_constraintBottom_toBottomOf="@+id/view_dominant"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
